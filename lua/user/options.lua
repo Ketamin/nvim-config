@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 2
 
--- Enable smart indenting 
+-- Enable smart indenting
 vim.opt.breakindent = true
 
 -- Enable incremental searching
@@ -43,7 +43,7 @@ vim.opt.smartcase = true
 vim.opt.updatetime = 250
 
 -- Set completeopt to have batter completion experience
-vim.opt.completeopt = {"menuone", "noselect"}
+vim.opt.completeopt = { "menuone", "noselect" }
 
 -- Enable persistent undo history
 vim.opt.undofile = true
@@ -82,3 +82,7 @@ vim.opt.guicursor = {
 	"a:blinkwait700-blinkoff400-blinkon250", -- All modes: blinking settings
 	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch: block cursor with specific blinking settings
 }
+
+-- Spell checking
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true

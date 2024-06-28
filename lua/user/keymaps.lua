@@ -269,12 +269,16 @@ nnoremap("<leader>sf", function()
 end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 nnoremap("<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
-
 nnoremap("<leader>sc", function()
-  require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
-    previewer = false,
-  }))
-end, { desc = "[S]earch [C]ommands" })
+ require("telescope.builtin").live_grep({search_dirs={vim.fn.expand("%:p")}}) 
+end, {desc = "[S]earch [C]urrent file"})
+
+
+-- nnoremap("<leader>sc", function()
+--   require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
+--     previewer = false,
+--   }))
+-- end, { desc = "[S]earch [C]ommands" })
 
 nnoremap("<leader>/", function()
   require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
